@@ -88,10 +88,11 @@ CreateWorkspace({name = "bspzip",serverside = false})
 			})
 			files({
 				path.join("source","utils","lzma","lzma.cpp"),
-				path.join("source","linux_support.cpp"),
+				path.join("source","filesystem","linux_support.cpp"),
 				path.join("source","bspzip.cpp"),
 			})
-			vpaths({["Source files/*"] = path.join("source" , "*.cpp")})
+			vpaths({["Source files/*"] = path.join("source" , "*.cpp"),
+			["Header files/*"] = path.join("source","*.h")})
 
 			filter("system:linux")
 				links { "dl","pthread" }

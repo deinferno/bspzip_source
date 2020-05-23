@@ -10,7 +10,8 @@
 #include "cmdlib.h"
 #include "tier0/icommandline.h"
 #include "utlbuffer.h"
-#include "bspzip.hpp"
+
+void CmdLib_InitFileSystemCompability( const char *pFilename, int maxMemoryUsage = 0 );
 
 //Use filesystem_stdio
 void CmdLib_InitFileSystemCompability( const char *pFilename, int maxMemoryUsage )
